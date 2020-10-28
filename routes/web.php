@@ -28,5 +28,6 @@ Route::delete('/book/{book}', [App\Http\Controllers\BookController::class, 'dele
 
 Route::get('/bookList', [App\Http\Controllers\BookListController::class, 'index'])->middleware('auth');
 
+Route::post('/bookList', [App\Http\Controllers\BookListController::class, 'search'])->middleware('auth');
 // TODO:削除予定
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
